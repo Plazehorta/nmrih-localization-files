@@ -23,7 +23,7 @@
 [*]在創建伺服器視窗新增一個選單來選擇 Steam 連線的伺服器類型，不需要 Port foward 即可創建公開 / 僅限好友 / 不公開的伺服器
 [*]新增單人遊戲模式下可暫停遊戲的功能
 [*]在進階選項中新增舉起物件預判設定
-[*]新增控制台參數 "cl_allow_particle_precipitation"，關閉時，使用雨水或雪的地圖中的粒子效果會改成預設的版本
+[*]新增控制台參數 "cl_allow_particle_precipitation", 關閉時，使用雨水或雪的地圖中的粒子效果會改成預設的版本
 [/list]
 [h2]更動[/h2]
 [list]
@@ -37,7 +37,7 @@
 [*]更新在地化檔案：
 [list]
 
-[*]感謝社群翻譯者：[b]Atheist、Klowby、MakinDay、marcielcps、Plazehorta、RicecakeHuman[/b]
+[*]感謝社群翻譯者: [b]Atheist, Klowby, MakinDay, marcielcps, Plazehorta, RicecakeHuman[/b]
 [*]想要為 NMRiH 在地化你的語言嗎？ [url=https://github.com/nmrih/nmrih-localization-files]造訪我們在 GitHub 上的在地化存儲庫。[/url]
 [/list]
 [/list]
@@ -51,17 +51,17 @@
 [list]
 [*]新增自訂殭屍模型池，可以利用開頭為 "sv_zombie_models" 的控制台參數控制
 [*]新增 "ent_minsmaxs" 命令，輸出適用於 MapHack 格式的 Entity 邊界方塊 (Bounding box)
-[*]新增 Entity "npc_nmrih_basezombie"，基礎類別給常態的殭屍，有利於自訂殭屍
-[*]新增 Entity "skybox_swapper"，替換 2D skybox 材質
+[*]新增 Entity "npc_nmrih_basezombie", 基礎類別給常態的殭屍，有利於自訂殭屍
+[*]新增 Entity "skybox_swapper", 替換 2D skybox 材質
 [*]新增殭屍的 "HeadSplit" input (#1569)
-[*]新增殭屍載體 (Hull) 修改輸入格
-[*]新增 input "RevertAllMapCvars" 給 Entity "logic_ruleset"，這會將受到地圖更動過的控制台參數改回基礎值 (若有的話) 或預設值，這不會動到難易度 / 腳本 / 修改器 (mutator) 的更動
-[*]新增輸入格 "Despawn Ignore Population" 給 Entity "func_zombie_spawn"，預設下，即使不被玩家看見，殭屍只會在區域人口超出最大值時消失；若設定為 'No'，將使用經典的規則讓玩家經過過的區域維持最大殭屍數，設定為 'Yes' 則會在殭屍不被看見時消失
-[*]新增輸入格 "Ignore Zombie Rules" 給殭屍，當啟動時，遊戲會把殭屍視為常態 NPC
+[*]新增殭屍載體 (Hull) 修改 keyfield
+[*]新增 input "RevertAllMapCvars" 給 Entity "logic_ruleset", 這會將受到地圖更動過的控制台參數改回基礎值 (若有的話) 或預設值，這不會動到難易度 / 腳本 / 修改器 (mutator) 的更動
+[*]新增 keyfield "Despawn Ignore Population" 給 Entity "func_zombie_spawn", 預設下，即使不被玩家看見，殭屍只會在區域人口超出最大值時消失；若設定為 'No' 將使用經典的規則讓玩家經過過的區域維持最大殭屍數，設定為 'Yes' 則會在殭屍不被看見時消失
+[*]新增 keyfield "Ignore Zombie Rules" 給殭屍，當啟動時，遊戲會把殭屍視為常態 NPC
 [*]新增換行功能給 Entity "point_message_multiplayer"
 [*]新增遺失的 spawnflags 給 Entity "point_viewcontrol_multiplayer"
 [*]新增輸出 "OnBarricade" 及 "OnBreak" 給 Entity "nmrih_barricade"
-[*]新增路障木板的替代模型支援
+[*]新增支援路障木板的模型替代功能
 [*]新增為特定客戶端的過濾模型彩現支援
 [*]修正 Dynamic "logic_progress" 永遠完成在 "StopProgress"
 [*]修正 Entity "logic_script_proxy" calls 使用變數時無法取得 global 層級
@@ -72,10 +72,10 @@
 [*]FGD: 自訂的 "base.fgd" 現在與 "nmrih.fgd" 一併提供，取代 class overrides 和基礎 SDK 的依賴
 [*]MapHack: 修正生成 Brush entity 的碰撞邊界
 [*]VScript: 新增 CBaseAnimating functions SetPlayerDrawFilter() 和 DrawFilterAllPlayers(), 當啟動時，這個模型不會被指定玩家看見
-[*]VScript: 新增 CBaseEntity hook OnTakeDamage, 這個 hook 設計來取代無法修改的 filter_script 的 PassesFinalDamageFilter，受到的傷害可以在套用前修改，回到 'false' 可取消傷害
+[*]VScript: 新增 CBaseEntity hook OnTakeDamage, 這個 hook 設計來取代無法修改的 filter_script 的 PassesFinalDamageFilter, 受到的傷害可以在套用前修改，回到 'false' 可取消傷害
 [*]VScript: 新增 CNMRiH_BarricadePoint function SetModelOverride()
 [*]VScript: 新增 CNMRiH_Player function DidGunshotSuicide()
-[*]VScript: 新增 CNMRiH_Player hooks OnWeaponDrop, OnWeaponEquip, 及 OnWeaponSwitch
+[*]VScript: 新增 CNMRiH_Player hooks OnWeaponDrop, OnWeaponEquip 及 OnWeaponSwitch
 [*]VScript: 新增跨平台一致的 rand() 和 RAND_MAX 
 [*]VScript: 新增 constants 給 NMRiH button masks, 碰撞群組及傷害類型
 [*]VScript: 新增 CScriptNavArea functions GetAdjacentAreas() 及 GetAdjacentCount()
@@ -84,12 +84,12 @@
 [*]VScript: Class CScriptNavArea 現在有字串顯示 (例 "[&lt;ID&gt;] Area")
 [*]VScript: 修正 CNMRiH_Player function IsTalkingWalkie() 一直回傳 'false'
 [*]VScript: 修正當傳送 null 值給 TraceLineEx() function 的崩潰
-[*]VScript: 修正 function SetActivity() 允許 ACT_INVALID，以導致崩潰
+[*]VScript: 修正 function SetActivity() 允許 ACT_INVALID, 導致崩潰
 [*]VScript: 修正 hooks NPC_TranslateActivity 和 NPC_TranslateSchedule 不檢查無效的回傳類別
 [/list]
 [h2]為伺服器管理者進行的更動[/h2]
 [list]
-[*]新增修改殭屍模型池的功能，利用控制台參數 "sv_zombie_models", "sv_zombie_models_kid", "sv_zombie_models_ng" 及 "sv_zombie_models_runner" 控制，模型以 ',' 區隔，登記為 models/nmr_zombie/*.mdl (或單一檔案名稱)
+[*]新增修改殭屍模型池的功能，利用控制台參數 "sv_zombie_models", "sv_zombie_models_kid", "sv_zombie_models_ng" 及 "sv_zombie_models_runner" 控制，模型以 ',' 區隔，登記為 models/nmr_zombie/*.mdl (或直接的檔案名稱)
 [*]新增控制台參數 "ov_despawn_ignore_population", 預設時殭屍只會在區域人口超出最大值時移除，設為 0 使用原始規則讓待過的地方維持最大殭屍數，設為 1 永遠移除看不見的殭屍 (#1562)
 [*]新增控制台參數 "sv_runner_randomize_collision_group", 奔跑殭屍產生時永遠切換碰撞群組 (軟)，設為 0 並配上 BecomeRunner 會產生 v1.15.0 之前的錯誤行為
 [*]新增控制台參數 "sv_zombie_brainstem_dmg_scale", 殭屍會把此數值納入腦幹傷害的計算 (若 sv_brainstem 1)
